@@ -1,7 +1,9 @@
 package uz.example.touristguider;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -46,12 +49,33 @@ public class SettingsFragment extends Fragment {
             getActivity().onBackPressed();
         });
 
+        binding.editAccountTv.setOnClickListener(v -> {
+          //  startActivity(new Intent(requireContext(), EditAccount.class));
+        });
+
+        binding.languageTv.setOnClickListener(v -> showLanguageDialog());
+
         binding.nightModeSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                setNightMode(true);
             } else {
                setNightMode(false);
             }
+        });
+
+        binding.invateTv.setOnClickListener(v -> {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=uz.example.touristguider");
+            sendIntent.setType("text/plain");
+            startActivity(sendIntent);
+        });
+
+        binding.helpTv.setOnClickListener(v -> {
+            String tg_url = "https://t.me/Haytboyev_Sarvar";
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(android.net.Uri.parse(tg_url));
+            startActivity(intent);
         });
 
         binding.logout.setOnClickListener(v -> {
@@ -71,13 +95,6 @@ public class SettingsFragment extends Fragment {
             dialog.show();
         });
 
-        binding.helpTv.setOnClickListener(v -> {
-            String tg_url = "https://t.me/Haytboyev_Sarvar";
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(android.net.Uri.parse(tg_url));
-            startActivity(intent);
-        });
-
         return view;
     }
 
@@ -87,5 +104,18 @@ public class SettingsFragment extends Fragment {
         } else {
             requireActivity().setTheme(R.style.Theme_TouristGuider);
         }
+    }
+
+    private void showLanguageDialog() {
+        String[] languages = {"Uzbek", "English", "Russian"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("Tilni tanlang")
+                .setItems(languages, (dialog, which) -> {
+                    String selectedLanguage = languages[which];
+                    // Do something with the selected language
+                    // For example, exchange a display lang
+                     Toast.makeText(getActivity(), "Selected language: " + selectedLanguage, Toast.LENGTH_SHORT).show();
+                });
+        builder.create().show();
     }
 }
