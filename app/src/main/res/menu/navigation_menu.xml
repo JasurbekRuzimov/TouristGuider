@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/menuHome"
+        android:icon="@drawable/home"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/menuMap"
+        android:icon="@drawable/map"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/menuSave"
+        android:icon="@drawable/bookmark"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/menuSettings"
+        android:icon="@drawable/settings"
+        tools:ignore="MenuTitle" />
+
+
+</menu>
