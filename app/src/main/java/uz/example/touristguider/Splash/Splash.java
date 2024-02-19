@@ -1,10 +1,13 @@
-package uz.example.touristguider;
+package uz.example.touristguider.Splash;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import uz.example.touristguider.MainActivity;
+import uz.example.touristguider.R;
 
 public class Splash extends AppCompatActivity {
 
