@@ -19,8 +19,8 @@
 
         <ImageView
             android:id="@+id/img_city"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
             android:layout_marginTop="8dp"
             android:src="@drawable/city"
             android:tint="@color/primary"
@@ -51,8 +51,8 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/montserrat"
             android:text="Xiva"
-            android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textColor="@color/primary"
+            android:textSize="13sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/img_city"
             app:layout_constraintStart_toEndOf="@+id/img_city"
@@ -61,9 +61,9 @@
 
         <ImageView
             android:id="@+id/img_region"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="4dp"
             android:layout_marginBottom="16dp"
             android:src="@drawable/map"
             android:tint="@color/primary"
@@ -81,8 +81,8 @@
             android:ellipsize="end"
             android:fontFamily="@font/montserrat"
             android:text="Xorazm"
-            android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textColor="@color/primary"
+            android:textSize="13sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/img_region"
             app:layout_constraintStart_toEndOf="@+id/img_region"
@@ -90,15 +90,19 @@
             tools:ignore="HardcodedText" />
 
         <ImageView
-            android:id="@+id/img_save"
-            android:layout_width="22dp"
-            android:layout_height="27dp"
-            android:layout_marginBottom="8dp"
-            android:src="@drawable/bookmark"
+            android:id="@+id/city_info"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/image_corner_back"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:rotation="180"
+            android:src="@drawable/back"
             android:tint="@color/primary"
-            app:layout_constraintBottom_toBottomOf="@+id/name_region"
+            app:layout_constraintBottom_toBottomOf="@+id/img_region"
             app:layout_constraintEnd_toEndOf="@+id/img_main"
-            tools:ignore="ContentDescription,MissingConstraints,UseAppTint" />
+            tools:ignore="ContentDescription,RtlSymmetry,UseAppTint" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
