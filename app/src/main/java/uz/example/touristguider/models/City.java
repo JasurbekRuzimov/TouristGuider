@@ -116,4 +116,5 @@ public class City {
     public boolean getDataDesc() {
         return false;
     }
+
 }
