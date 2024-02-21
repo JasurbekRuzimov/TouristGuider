@@ -14,7 +14,7 @@
 
     <item
         android:id="@+id/menuSave"
-        android:icon="@drawable/bookmark"
+        android:icon="@drawable/currency_exchange"
         tools:ignore="MenuTitle" />
 
     <item

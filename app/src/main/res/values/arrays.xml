@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="currency_types">
+        <item>UZS</item>
+        <item>USD</item>
+        <item>EUR</item>
+        <item>RUB</item>
+        <item>GBP</item>
+        <item>JPY</item>
+        <item>CNY</item>
+        <item>INR</item>
+        <item>AUD</item>
+        <item>CAD</item>
+        <item>SGD</item>
+        <item>CHF</item>
+        <item>MYR</item>
+        <item>THB</item>
+        <item>PHP</item>
+        <item>IDR</item>
+        <item>MXN</item>
+        <item>ARS</item>
+        <item>BRL</item>
+    </string-array>
+</resources>
