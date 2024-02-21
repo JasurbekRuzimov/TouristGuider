@@ -5,12 +5,15 @@
     android:layout_height="match_parent"
     tools:context=".bottomnavfragments.LocationFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <WebView
+        android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="55dp"
+        android:background="@color/white"
+        android:foregroundGravity="center" />
+
 
 </FrameLayout>
