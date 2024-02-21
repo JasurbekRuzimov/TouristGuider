@@ -35,7 +35,6 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="HardcodedText" />
 
-
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.appcompat.widget.SearchView
@@ -271,7 +270,6 @@
         </LinearLayout>
 
     </HorizontalScrollView>
-
 
     <ScrollView
         android:layout_width="wrap_content"
