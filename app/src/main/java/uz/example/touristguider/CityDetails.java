@@ -37,7 +37,6 @@ public class CityDetails extends AppCompatActivity {
         if (bundle != null) {
             city_name.setText(bundle.getString("Name"));
             city_history.setText(bundle.getString("History"));
-            detailImage.setImageResource(bundle.getInt("Image"));
         }
 
 
