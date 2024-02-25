@@ -2,4 +2,7 @@
     <string name="app_name">Tourist Guider</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chiqish_amalga_oshmoqda">Chiqish amalga oshmoqda\n</string>
+    <string name="accountdan_chiqib_ketmoqchimisiz">Accountdan chiqib ketmoqchimisiz</string>
+    <string name="siz_avtorizatsiyadan_o_tmadingiz">Siz avtorizatsiyadan o\'tmadingiz</string>
 </resources>
