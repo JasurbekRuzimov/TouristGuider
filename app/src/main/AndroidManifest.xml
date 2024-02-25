@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -19,6 +18,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TouristGuider"
         tools:targetApi="31">
+        <activity
+            android:name=".Splash.SplashMidd"
+            android:exported="false" />
+        <activity
+            android:name=".register.SignIn"
+            android:exported="false" />
+        <activity
+            android:name=".register.SignUp"
+            android:exported="false" />
         <activity
             android:name=".CityDetails"
             android:exported="false" />
