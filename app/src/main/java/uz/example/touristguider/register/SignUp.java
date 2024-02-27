@@ -39,17 +39,17 @@ public class SignUp extends AppCompatActivity {
 
             String email = Objects.requireNonNull(binding.emailIdFairbase.getEditText()).getText().toString();
             if (email.isEmpty()) {
-                binding.emailIdFairbase.setError("Emailni kiriting !");
+                binding.emailIdFairbase.setError("Enter your email !");
                 return;
             }
             String phoneNumber = Objects.requireNonNull(binding.phoneNumberIdFirebase.getEditText()).getText().toString();
             if (phoneNumber.isEmpty()) {
-                binding.phoneNumberIdFirebase.setError("Telefon raqam kiriting !");
+                binding.phoneNumberIdFirebase.setError("Enter a phone number !");
                 return;
             }
             String password = Objects.requireNonNull(binding.passwordIdFairbase.getEditText()).getText().toString();
             if (password.isEmpty()) {
-                binding.passwordIdFairbase.setError("Parolni kiriting !");
+                binding.passwordIdFairbase.setError("Enter the password !");
                 return;
             }
 
