@@ -19,7 +19,7 @@
 
     <item
         android:id="@+id/menuSettings"
-        android:icon="@drawable/settings"
+        android:icon="@drawable/user"
         tools:ignore="MenuTitle" />
 
 
