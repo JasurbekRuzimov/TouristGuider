@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "970656679355",
+    "project_id": "tourist-guider-a544c",
+    "storage_bucket": "tourist-guider-a544c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970656679355:android:24c4623376b36f9c09709e",
+        "android_client_info": {
+          "package_name": "uz.example.touristguider"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAXtUKqUulaWbwVv8wBcXxna5-jk6hm0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
