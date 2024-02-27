@@ -13,7 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import uz.example.touristguider.bottomnavfragments.CurrencyExchangeFragment;
 import uz.example.touristguider.bottomnavfragments.HomeFragment;
 import uz.example.touristguider.bottomnavfragments.LocationFragment;
-import uz.example.touristguider.bottomnavfragments.SettingsFragment;
+import uz.example.touristguider.bottomnavfragments.AccountFragment;
 import uz.example.touristguider.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (item.getItemId() == R.id.menuSave) {
                 selectedFragment = new CurrencyExchangeFragment();
             } else {
-                selectedFragment = new SettingsFragment();
+                selectedFragment = new AccountFragment();
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
             return true;
