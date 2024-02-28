@@ -1,4 +1,4 @@
-package uz.jasurbekruzimov.smartchild.DataBase;
+package uz.example.touristguider.DataBase;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -8,11 +8,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
 public class DBHelper extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "smartChild.db";
+    private static final String DATABASE_NAME = "tourist_guider.db";
     private static final String TABLE_NAME = "users";
     private static final String COL_ID = "id";
-    private static final String Ismi = "Ismi";
-    private static final String Familiyasi = "Familiyasi";
+    private static final String Name = "Name";
+    private static final String Surname = "Surname";
     private final Context context;
 
     public DBHelper(Context context) {
@@ -23,8 +23,8 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String query = "CREATE TABLE " + TABLE_NAME + " (" + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                Ismi + " TEXT, " +
-                Familiyasi + " TEXT);";
+                Name + " TEXT, " +
+                Surname + " TEXT);";
         db.execSQL(query);
 
     }
@@ -39,11 +39,11 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
-    public void mahalla(String ismi, String familiyasi) {
+    public void users(String name, String surname) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(Ismi, ismi);
-        contentValues.put(Familiyasi, familiyasi);
+        contentValues.put(Name, name);
+        contentValues.put(Surname, surname);
         long result = db.insert(TABLE_NAME, null, contentValues);
         if (result == -1) {
             Toast.makeText(context, "Xatolik yuz berdi !", Toast.LENGTH_SHORT).show();
@@ -65,8 +65,8 @@ public class DBHelper extends SQLiteOpenHelper {
     void updateData(String row_id, String ismi, String familiyasi) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(Ismi, ismi);
-        contentValues.put(Familiyasi, familiyasi);
+        contentValues.put(Name, ismi);
+        contentValues.put(Surname, familiyasi);
         long result = db.update(TABLE_NAME, contentValues, "id=?", new String[]{row_id});
         if (result == -1) {
             Toast.makeText(context, "Xatolik yuz berdi !", Toast.LENGTH_SHORT).show();
@@ -93,8 +93,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Cursor getAllData() {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
-        return cursor;
+        return db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
     }
 
 }
