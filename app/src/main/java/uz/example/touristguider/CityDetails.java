@@ -8,8 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CityDetails extends AppCompatActivity {
-
-
     TextView city_name, city_history, cityLocation, cityAttraction, cityHours, cityPhone, cityWebsite;
     ImageView detailImage, backBtn;
 
@@ -38,7 +36,6 @@ public class CityDetails extends AppCompatActivity {
             city_name.setText(bundle.getString("Name"));
             city_history.setText(bundle.getString("History"));
         }
-
 
     }
 }
