@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import java.util.Objects;
 
+import uz.example.touristguider.MainActivity;
 import uz.example.touristguider.databinding.ActivitySignUpBinding;
 import uz.example.touristguider.models.UserModel;
 
@@ -42,11 +43,6 @@ public class SignUp extends AppCompatActivity {
                 binding.emailIdFairbase.setError("Enter your email !");
                 return;
             }
-            String phoneNumber = Objects.requireNonNull(binding.phoneNumberIdFirebase.getEditText()).getText().toString();
-            if (phoneNumber.isEmpty()) {
-                binding.phoneNumberIdFirebase.setError("Enter a phone number !");
-                return;
-            }
             String password = Objects.requireNonNull(binding.passwordIdFairbase.getEditText()).getText().toString();
             if (password.isEmpty()) {
                 binding.passwordIdFairbase.setError("Enter the password !");
@@ -56,12 +52,12 @@ public class SignUp extends AppCompatActivity {
             progressDialog.show();
             firebaseAuth.createUserWithEmailAndPassword(email, password)
                     .addOnSuccessListener(authResult -> {
-                        startActivity(new Intent(SignUp.this, SignIn.class));
+                        startActivity(new Intent(SignUp.this, MainActivity.class));
                         progressDialog.cancel();
 
                         firebaseFirestore.collection("User")
                                 .document(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid())
-                                .set(new UserModel(email, password, phoneNumber));
+                                .set(new UserModel(email, password, FirebaseAuth.getInstance().getCurrentUser().getUid()));
 
                     })
                     .addOnFailureListener(e -> {
