@@ -21,7 +21,7 @@ ActivitySplashBinding binding;
 
             Handler handler = new Handler();
             handler.postDelayed(() -> {
-                startActivity(new Intent(Splash.this, SplashMidd.class));
+                startActivity(new Intent(Splash.this, MainActivity.class));
                 finish();
             }, 1500);
     }
