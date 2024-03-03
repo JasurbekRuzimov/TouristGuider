@@ -1,13 +1,13 @@
-package uz.example.touristguider;
+package uz.example.touristguider.settings;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import uz.example.touristguider.R;
 import uz.example.touristguider.databinding.FragmentSettingsBinding;
 import uz.example.touristguider.register.SignIn;
 
@@ -50,7 +51,12 @@ public class SettingsFragment extends Fragment {
         });
 
         binding.editAccountTv.setOnClickListener(v -> {
-          //  startActivity(new Intent(requireContext(), EditAccount.class));
+            EditProfileFragment editProfileFragment = new EditProfileFragment();
+            FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+            FragmentTransaction transaction = ((FragmentManager) fragmentManager).beginTransaction();
+            transaction.replace(R.id.fragment_container, editProfileFragment);
+            transaction.addToBackStack(String.valueOf(true));
+            transaction.commit();
         });
 
         binding.languageTv.setOnClickListener(v -> showLanguageDialog());
