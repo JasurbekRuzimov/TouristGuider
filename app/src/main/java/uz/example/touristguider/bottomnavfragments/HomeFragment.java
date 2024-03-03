@@ -23,6 +23,7 @@ import uz.example.touristguider.R;
 import uz.example.touristguider.adapters.CityAdapter;
 import uz.example.touristguider.databinding.FragmentHomeBinding;
 import uz.example.touristguider.models.City;
+
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
@@ -55,12 +56,10 @@ public class HomeFragment extends Fragment {
         searchView.clearFocus();
 
         city_list = binding.cityList;
-        cityList.add(new City("Kalta Minor", "Xorazm", getResources().getDrawable(R.drawable.xiva)));
-        cityList.add(new City("Buxoro Arki", "Buxoro", getResources().getDrawable(R.drawable.buxoro)));
-        cityList.add(new City("Toshkent Teleminorasi", "Toshkent", getResources().getDrawable(R.drawable.xiva2)));
-        cityList.add(new City("Registon maydoni", "Samarqand", getResources().getDrawable(R.drawable.registon)));
-        cityList.add(new City("Islom Xo'ja Minorasi", "Xorazm", getResources().getDrawable(R.drawable.xiva)));
-        cityList.add(new City("Buxoro Arki", "Buxoro", getResources().getDrawable(R.drawable.buxoro)));
+        city_list.setLayoutManager(new GridLayoutManager(getContext(), 2));
+
+        cityList.add(new City("Uzbekistan Hotel", "Toshkent", getResources().getDrawable(R.drawable.registon)));
+        cityList.add(new City("Uzbekistan Hotel", "Xorazm", getResources().getDrawable(R.drawable.xiva)));
         cityList.add(new City("Toshkent", "Toshkent", getResources().getDrawable(R.drawable.xiva2)));
         cityList.add(new City("Samarqand", "Samarqand", getResources().getDrawable(R.drawable.registon)));
         cityList.add(new City("Kalta Minor", "Xorazm", getResources().getDrawable(R.drawable.xiva)));
@@ -80,19 +79,29 @@ public class HomeFragment extends Fragment {
         cityList.add(new City("Registon maydoni", "Samarqand", getResources().getDrawable(R.drawable.registon)));
         cityList.add(new City("Islom Xo'ja Minorasi", "Xorazm", getResources().getDrawable(R.drawable.xiva)));
         cityList.add(new City("Buxoro Arki", "Buxoro", getResources().getDrawable(R.drawable.buxoro)));
-        cityList.add(new City("Toshkent", "Toshkent", getResources().getDrawable(R.drawable.xiva2)));
-        cityList.add(new City("Samarqand", "Samarqand", getResources().getDrawable(R.drawable.registon)));
+        cityList.add(new City("Uzbekistan Hotel", "Samarqand", getResources().getDrawable(R.drawable.registon)));
+        cityList.add(new City("Uzbekistan Hotel", "Buxoro", getResources().getDrawable(R.drawable.buxoro)));
+        cityList.add(new City("Uzbekistan Hotel", "Toshkent", getResources().getDrawable(R.drawable.xiva2)));
         cityList.add(new City("Kalta Minor", "Xorazm", getResources().getDrawable(R.drawable.xiva)));
         cityList.add(new City("Buxoro Arki", "Buxoro", getResources().getDrawable(R.drawable.buxoro)));
         cityList.add(new City("Toshkent Teleminorasi", "Toshkent", getResources().getDrawable(R.drawable.xiva2)));
-        cityList.add(new City("Registon maydoni", "Samarqand", getResources().getDrawable(R.drawable.registon)));
+        cityList.add(new City("Registon maydoni", "Jizzax", getResources().getDrawable(R.drawable.registon)));
         cityList.add(new City("Islom Xo'ja Minorasi", "Xorazm", getResources().getDrawable(R.drawable.xiva)));
+        cityList.add(new City("Buxoro Arki", "Sirdaryo", getResources().getDrawable(R.drawable.buxoro)));
+        cityList.add(new City("Toshkent", "Qoraqalpog'iston", getResources().getDrawable(R.drawable.xiva2)));
+        cityList.add(new City("Samarqand", "Andijon", getResources().getDrawable(R.drawable.registon)));
+        cityList.add(new City("Kalta Minor", "Xorazm", getResources().getDrawable(R.drawable.xiva)));
         cityList.add(new City("Buxoro Arki", "Buxoro", getResources().getDrawable(R.drawable.buxoro)));
-        cityList.add(new City("Toshkent", "Toshkent", getResources().getDrawable(R.drawable.xiva2)));
+        cityList.add(new City("Toshkent Teleminorasi", "Toshkent", getResources().getDrawable(R.drawable.xiva2)));
+        cityList.add(new City("Registon maydoni", "Namangan", getResources().getDrawable(R.drawable.registon)));
+        cityList.add(new City("Islom Xo'ja Minorasi", "Qashqadaryo", getResources().getDrawable(R.drawable.xiva)));
+        cityList.add(new City("Buxoro Arki", "Buxoro", getResources().getDrawable(R.drawable.buxoro)));
+        cityList.add(new City("Toshkent", "Surxandaryo", getResources().getDrawable(R.drawable.xiva2)));
         cityList.add(new City("Samarqand", "Samarqand", getResources().getDrawable(R.drawable.registon)));
+        cityList.add(new City("Samarqand", "Navoiy", getResources().getDrawable(R.drawable.registon)));
         cityList.add(new City("Samarqand", "Samarqand", getResources().getDrawable(R.drawable.registon)));
-        cityList.add(new City("Samarqand", "Samarqand", getResources().getDrawable(R.drawable.registon)));
-        cityList.add(new City("Samarqand", "Samarqand", getResources().getDrawable(R.drawable.registon)));
+        cityList.add(new City("Samarqand", "Farg'ona", getResources().getDrawable(R.drawable.registon)));
+
 
         cityAdapter = new CityAdapter(cityList, getContext());
 
@@ -186,7 +195,7 @@ public class HomeFragment extends Fragment {
         binding.surxondaryo.setOnClickListener(v -> {
             List<City> surxondaryoList = new ArrayList<>();
             for (City city : cityList) {
-                if (city.getRegion().equals("Surxondaryo")) {
+                if (city.getRegion().equals("Surxandaryo")) {
                     surxondaryoList.add(city);
                 }
             }
@@ -213,7 +222,7 @@ public class HomeFragment extends Fragment {
         binding.karakalpakstan.setOnClickListener(v -> {
             List<City> karakalpakstanList = new ArrayList<>();
             for (City city : cityList) {
-                if (city.getRegion().equals("Qoraqalpog'iston Respublikasi")) {
+                if (city.getRegion().equals("Qoraqalpog'iston")) {
                     karakalpakstanList.add(city);
                 }
             }
