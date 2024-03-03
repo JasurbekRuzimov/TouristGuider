@@ -32,7 +32,7 @@
             tools:ignore="HardcodedText,UnusedAttribute" />
 
         <ImageView
-            android:id="@+id/settings"
+            android:id="@+id/back_TV"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_gravity="end"
@@ -46,6 +46,13 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <ProgressBar
+        android:id="@+id/progressBarEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -55,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            tools:ignore="MissingConstraints">
+            tools:ignore="MissingConstraints,ScrollViewSize">
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/editUserImage"
@@ -65,7 +72,6 @@
                 android:layout_marginTop="40dp"
                 android:cropToPadding="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/travel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
@@ -105,16 +111,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginEnd="55dp"
                 android:background="@drawable/image_corner_back"
                 android:fontFamily="@font/montserrat"
                 android:hint=" Name "
+                android:inputType="textCapWords"
                 android:padding="10dp"
                 android:textColor="@color/primary"
                 android:textSize="18sp"
                 android:textStyle="normal"
-                tools:ignore="HardcodedText,MissingConstraints,RtlSymmetry" />
+                tools:ignore="Autofill,HardcodedText,MissingConstraints,RtlSymmetry,TextFields" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -133,45 +140,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginEnd="55dp"
                 android:background="@drawable/image_corner_back"
                 android:fontFamily="@font/montserrat"
                 android:hint=" Surname "
+                android:inputType="textCapWords"
                 android:padding="10dp"
                 android:textColor="@color/primary"
                 android:textSize="18sp"
                 android:textStyle="normal"
                 tools:ignore="HardcodedText,MissingConstraints,RtlSymmetry" />
 
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/montserrat"
-                android:text="Email"
-                android:textColor="@color/primary"
-                android:textSize="15sp"
-                android:textStyle="normal"
-                tools:ignore="HardcodedText,MissingConstraints" />
-
-            <EditText
-                android:id="@+id/editEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:background="@drawable/image_corner_back"
-                android:fontFamily="@font/montserrat"
-                android:hint=" Email "
-                android:padding="10dp"
-                android:textColor="@color/primary"
-                android:textSize="18sp"
-                android:textStyle="normal"
-                tools:ignore="HardcodedText,MissingConstraints,RtlSymmetry" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -185,21 +165,19 @@
                 android:textStyle="normal"
                 tools:ignore="HardcodedText,MissingConstraints" />
 
-            <EditText
-                android:id="@+id/editCountry"
+            <Spinner
+                android:id="@+id/countrySpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginEnd="55dp"
                 android:background="@drawable/image_corner_back"
                 android:fontFamily="@font/montserrat"
-                android:hint=" Country "
                 android:padding="10dp"
                 android:textColor="@color/primary"
                 android:textSize="18sp"
-                android:textStyle="normal"
-                tools:ignore="HardcodedText,MissingConstraints,RtlSymmetry" />
+                android:textStyle="normal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -218,11 +196,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginEnd="55dp"
                 android:background="@drawable/image_corner_back"
                 android:fontFamily="@font/montserrat"
                 android:hint=" Phone Number "
+                android:inputType="phone"
+                android:maxLength="13"
                 android:padding="10dp"
                 android:textColor="@color/primary"
                 android:textSize="18sp"
@@ -233,29 +213,15 @@
                 android:id="@+id/updateProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="55dp"
+                android:layout_gravity="end"
+                android:layout_marginBottom="75dp"
                 android:background="@drawable/image_corner_back"
                 android:fontFamily="@font/montserrat"
-                android:text="Update Profile"
+                android:text="Update"
                 android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="normal"
-                tools:ignore="HardcodedText,MissingConstraints,RtlSymmetry" />
-
-            <Button
-                android:id="@+id/deleteProfile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:background="@drawable/image_corner_back"
-                android:fontFamily="@font/montserrat"
-                android:text="Delete Profile"
-                android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:textStyle="normal"
                 tools:ignore="HardcodedText,MissingConstraints,RtlSymmetry" />
 
