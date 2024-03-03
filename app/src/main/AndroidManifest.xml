@@ -25,9 +25,6 @@
         android:theme="@style/Theme.TouristGuider"
         tools:targetApi="31">
         <activity
-            android:name=".Splash.SplashMidd"
-            android:exported="false" />
-        <activity
             android:name=".register.SignIn"
             android:exported="false" />
         <activity
