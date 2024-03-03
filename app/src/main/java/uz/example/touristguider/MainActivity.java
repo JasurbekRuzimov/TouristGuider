@@ -6,15 +6,18 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import uz.example.touristguider.bottomnavfragments.CurrencyExchangeFragment;
 import uz.example.touristguider.bottomnavfragments.HomeFragment;
 import uz.example.touristguider.bottomnavfragments.LocationFragment;
 import uz.example.touristguider.bottomnavfragments.AccountFragment;
 import uz.example.touristguider.databinding.ActivityMainBinding;
+import uz.example.touristguider.register.SignIn;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,6 +49,13 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
 
+    }
+    protected void onStart() {
+        super.onStart();
+        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
+            startActivity(new Intent(MainActivity.this, SignIn.class));
+            finish();
+        }
     }
 
 }
