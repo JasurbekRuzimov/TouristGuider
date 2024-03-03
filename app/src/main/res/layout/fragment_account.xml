@@ -8,21 +8,6 @@
     android:background="@color/white"
     tools:context=".bottomnavfragments.AccountFragment">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Paroli"
-        android:textColor="@color/primary"
-        android:textSize="15sp"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userEmail"
-        tools:ignore="HardcodedText,MissingConstraints" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
@@ -30,7 +15,6 @@
         android:background="@color/primary"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
@@ -56,9 +40,9 @@
             android:id="@+id/settings"
             android:layout_width="22dp"
             android:layout_height="22dp"
+            android:layout_marginEnd="32dp"
             android:src="@drawable/settings"
             android:tint="@color/white"
-            android:layout_marginEnd="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -67,86 +51,242 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/userImage"
-        style="@style/Widget.Material3.CardView.Elevated"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
-        app:cardUseCompatPadding="true"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         tools:ignore="MissingConstraints">
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:padding="5dp"
-            android:src="@drawable/travel"
-            tools:ignore="ContentDescription,MissingConstraints" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints,UselessLeaf">
 
-    </androidx.cardview.widget.CardView>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="MissingConstraints">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Email manzili"
-        android:textColor="@color/primary"
-        android:textSize="15sp"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userImage"
-        tools:ignore="HardcodedText,MissingConstraints" />
 
-    <TextView
-        android:id="@+id/userEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="55dp"
-        android:background="@drawable/image_corner_back"
-        android:fontFamily="@font/montserrat"
-        android:hint=" Email "
-        android:paddingStart="20dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:textColor="@color/primary"
-        android:textSize="18sp"
-        android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="HardcodedText,MissingConstraints,RtlSymmetry" />
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_border_color="@color/dark_gray"
+                    app:riv_border_width="2dp"
+                    app:riv_corner_radius="50dp" />
 
-    <TextView
-        android:id="@+id/userPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="55dp"
-        android:background="@drawable/image_corner_back"
-        android:fontFamily="@font/montserrat"
-        android:hint=" Parol "
-        android:paddingStart="20dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:textColor="@color/primary"
-        android:textSize="18sp"
-        android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:ignore="HardcodedText,MissingConstraints,RtlSymmetry" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userImage"
+                    tools:ignore="MissingConstraints">
+
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text=""
+                        android:textColor="@color/primary"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,MissingConstraints" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:visibility="visible"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/userSurname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text=""
+                        android:textColor="@color/primary"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,MissingConstraints,UnusedAttribute" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/userEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="55dp"
+                    android:background="@drawable/image_corner_back"
+                    android:fontFamily="@font/montserrat"
+                    android:hint=" Email "
+                    android:padding="10dp"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    tools:ignore="HardcodedText,MissingConstraints,RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/userPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="55dp"
+                    android:background="@drawable/image_corner_back"
+                    android:fontFamily="@font/montserrat"
+                    android:hint=" Password "
+                    android:padding="10dp"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/user_surname"
+                    tools:ignore="HardcodedText,MissingConstraints,RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/textPhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Phone Number"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userPassword"
+                    tools:ignore="HardcodedText,MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/userPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="55dp"
+                    android:background="@drawable/image_corner_back"
+                    android:fontFamily="@font/montserrat"
+                    android:hint=" Phone Number "
+                    android:padding="10dp"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textPhoneNumber"
+                    tools:ignore="HardcodedText,MissingConstraints,RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Email Address"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userCountry"
+                    tools:ignore="HardcodedText,MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/user_surname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Password"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userEmail"
+                    tools:ignore="DuplicateIds,HardcodedText,MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/enterData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="64dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="@drawable/image_corner_back"
+                    android:fontFamily="@font/montserrat"
+                    android:padding="8dp"
+                    android:text="Enter Data"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userPhone"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/userCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/image_corner_back"
+                    android:fontFamily="@font/montserrat"
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text=" "
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                    tools:ignore="HardcodedText" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
