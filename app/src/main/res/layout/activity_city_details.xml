@@ -77,9 +77,9 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/montserrat"
-                android:text="City History"
-                android:textColor="@color/primary"
-                android:textSize="20sp"
+                android:text="History"
+                android:textColor="@color/red"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
@@ -94,7 +94,7 @@
                 android:padding="8dp"
                 android:text="Description"
                 android:textColor="@color/primary"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 tools:ignore="HardcodedText,RtlHardcoded" />
 
             <TextView
@@ -103,9 +103,9 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/montserrat"
-                android:text="City Attractions"
-                android:textColor="@color/primary"
-                android:textSize="20sp"
+                android:text="Attractions"
+                android:textColor="@color/red"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
@@ -120,7 +120,7 @@
                 android:padding="8dp"
                 android:text="Attractions"
                 android:textColor="@color/primary"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 tools:ignore="HardcodedText,RtlHardcoded" />
 
             <TextView
@@ -129,9 +129,9 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/montserrat"
-                android:text="City Hours"
-                android:textColor="@color/primary"
-                android:textSize="20sp"
+                android:text="Hours"
+                android:textColor="@color/red"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
@@ -146,7 +146,7 @@
                 android:padding="8dp"
                 android:text="Hours"
                 android:textColor="@color/primary"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 tools:ignore="HardcodedText,RtlHardcoded" />
 
             <TextView
@@ -155,9 +155,9 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/montserrat"
-                android:text="City Phone"
-                android:textColor="@color/primary"
-                android:textSize="20sp"
+                android:text="Phone Number"
+                android:textColor="@color/red"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
@@ -172,7 +172,7 @@
                 android:padding="8dp"
                 android:text="Phone"
                 android:textColor="@color/primary"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 tools:ignore="HardcodedText,RtlHardcoded" />
 
             <TextView
@@ -181,9 +181,9 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/montserrat"
-                android:text="City web site"
-                android:textColor="@color/primary"
-                android:textSize="20sp"
+                android:text="Web site"
+                android:textColor="@color/red"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
@@ -198,7 +198,7 @@
                 android:padding="8dp"
                 android:text="Web site"
                 android:textColor="@color/primary"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 tools:ignore="HardcodedText,RtlHardcoded" />
 
             <TextView
@@ -207,9 +207,9 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/montserrat"
-                android:text="City Location"
-                android:textColor="@color/primary"
-                android:textSize="20sp"
+                android:text="Location"
+                android:textColor="@color/red"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
@@ -224,7 +224,7 @@
                 android:padding="8dp"
                 android:text="Location"
                 android:textColor="@color/primary"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 tools:ignore="HardcodedText,RtlHardcoded" />
 
 
